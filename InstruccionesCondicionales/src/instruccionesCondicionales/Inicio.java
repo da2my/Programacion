@@ -6,11 +6,11 @@ public class Inicio {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		sumaParSinoDime(2, 7);
 	}
 
 	public static void condicionMayor() {
-		Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);					
 		System.out.println("Introduce numero: ");
 		int num;
 		num = scan.nextInt();
@@ -46,23 +46,31 @@ public class Inicio {
 	}
 
 	public static void sumaNumMayor(int num1, int num2) {
-	//		int aux=10;
-			if (num1 > 10 & num2 > 10) {
-				int suma = num1 + num2;
-				System.out.println("La suma de estos 2 numeros es: " + suma);
-			} else {
-				System.out.println("No se puede sumar");
-			}
+		// int aux=10;
+		if (num1 > 10 & num2 > 10) {
+			int suma = num1 + num2;
+			System.out.println("La suma de estos 2 numeros es: " + suma);
+		} else {
+			System.out.println("No se puede sumar");
 		}
+	}
 
 	public static void sumaParSinoDime(int num1, int num2) {
 		if ((num1 % 2 == 0) & (num2 % 2 == 0)) {
 			int suma = num1 + num2;
 			System.out.println("La suma de estos 2 numeros es: " + suma);
-		}else if() {
-			
+		} else if (num1 % 2 != 0 | num2 % 2 != 0) {
+			if (num1 % 2 == 0) {
+				System.out.println(num1 + " Este numero es par");
+			} else {
+				System.out.println(num1 + " Este numero es impar");
+			} 
+			if (num2 % 2 == 0) {
+				System.out.println(num2 + " Este numero es par");
+			} else {
+				System.out.println(num2 + " Este numero es impar");
+			}
 		}
-	
 	}
 
 }
