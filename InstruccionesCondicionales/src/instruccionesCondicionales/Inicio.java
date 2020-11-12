@@ -6,7 +6,7 @@ public class Inicio {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		sumaParSinoDime(2, 7);
+		condicionMayor();
 	}
 
 	public static void condicionMayor() {
@@ -17,7 +17,7 @@ public class Inicio {
 		if (num > 10) {
 			System.out.println("El numero es mayor que 10");
 		} else if (num < 10) {
-			System.out.println("El numero no es menor que 10");
+			System.out.println("El numero es menor que 10");
 		} else {
 			System.out.println("El numero es igual que 10");
 		}
@@ -46,7 +46,6 @@ public class Inicio {
 	}
 
 	public static void sumaNumMayor(int num1, int num2) {
-		// int aux=10;
 		if (num1 > 10 & num2 > 10) {
 			int suma = num1 + num2;
 			System.out.println("La suma de estos 2 numeros es: " + suma);
