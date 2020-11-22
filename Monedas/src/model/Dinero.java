@@ -1,7 +1,5 @@
 package model;
 
-import java.util.*;
-
 public class Dinero {
 
 	private static double cantidad;
@@ -11,7 +9,7 @@ public class Dinero {
 	}
 
 	public Dinero(double cantidad) {
-		this.cantidad = cantidad;
+		Dinero.cantidad = cantidad;
 	}
 
 	public double getCantidad() {
@@ -32,7 +30,6 @@ public class Dinero {
 		for (int i = 0; i < monedas.length; i++) {
 			double auxX = monedas[i];
 			double m = monedas[i];
-			int posicion = i;
 			if (m > 0) {
 				aux = (int) (cantidad / m);// numero de cada billete, en este caso 2
 				aux1 = (aux * m);// el valor a restar de los billetes que quitamos, siempre enteros. 100
