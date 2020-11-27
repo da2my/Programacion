@@ -5,7 +5,7 @@ public class Salario_18 {
 //	Principal
 	public static void main(String[] args) {
 
-		Salario_18 e1 = new Salario_18("David", 46);// Introducir nombre del trabajador y horas trabajadas por el consructor
+		Salario_18 e1 = new Salario_18("David", 40);// Introducir nombre del trabajador y horas trabajadas por el consructor
 		System.out.println(e1.toString());
 		System.out.println("Salario Bruto: " + e1.salarioBruto() + "€");
 		System.out.println("Impuestos: " + e1.impuestos() + "€");
