@@ -1,4 +1,4 @@
-package ejemplos;
+package vectores;
 
 import java.util.Arrays;
 
@@ -18,8 +18,8 @@ public class Vectores {
 		int larray1 = array1.length;
 		int larray2 = array2.length;
 
-		System.out.println("longitud array 1 " + larray1);
-		System.out.println("longitud array 2 " + larray2);
+		System.out.println("longitud array 1 sin de: " + larray1);
+		System.out.println("longitud array 2 sin de: " + larray2);
 
 		/*
 		 * larray1=larray2; System.out.println("longitud array 1 " + larray1);
@@ -47,16 +47,17 @@ public class Vectores {
 
 		System.out.println("Hola");
 
-		Arrays.fill(array, 5);
-		Arrays.fill(array, 1, 3, 2);
+	//	Arrays.fill(array, 5);
+		Arrays.fill(array, 1, 3, 2);//
 		System.out.println(Arrays.equals(array1, array2));
-		Arrays.sort(array);
+		Arrays.sort(array);//ordena
 
 		System.out.println("Hola");
 
-		int dondeestael10 = Arrays.binarySearch(array2, 10);
-		int dondeestael5 = Arrays.binarySearch(array, 5);
+		int dondeEstaEl10 = Arrays.binarySearch(array2, 10);//buscar donde esta el elemento con el 10 
+		int dondeEstaEl5 = Arrays.binarySearch(array, 5);
 
+		System.out.println(dondeEstaEl5);
 		System.out.println("Hola");
 	}
 }
