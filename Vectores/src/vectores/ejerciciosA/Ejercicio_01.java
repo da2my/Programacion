@@ -22,7 +22,6 @@ public class Ejercicio_01 {
 	static void muestraArray(double[] arr) {
 		for (int i = 0; i < arr.length; i++)
 			System.out.println(arr[i]);
-
 	}
 
 }
