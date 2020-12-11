@@ -17,15 +17,14 @@ public class Ejercicio_05 {
 	}
 
 	static void muestraArray(int[] arr) {
-		double sum=0;
+		double sum = 0;
 		double media = 0;
 		for (int i = 0; i < arr.length; i++) {
-			sum+=arr[i];
-			media=sum/arr.length;
+			sum += arr[i];
+			media = sum / arr.length;
 			System.out.println(arr[i]);
 		}
-		System.out.println("La media de estos numeros es: "+media);
-		
+		System.out.println("La media de estos numeros es: " + media);
 	}
 
 }
