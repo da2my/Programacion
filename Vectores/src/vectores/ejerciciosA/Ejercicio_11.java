@@ -1,7 +1,5 @@
 package vectores.ejerciciosA;
 
-import java.util.Arrays;
-
 public class Ejercicio_11 {
 
 	public static void main(String[] args) {
