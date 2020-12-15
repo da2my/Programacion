@@ -9,6 +9,7 @@ public class Ejercicio_01 {
 		System.out.println("Introduce cadena de texto: ");
 		String cadena = sc.nextLine();
 
+		
 		String[] arrSplit = cadena.split(" ");
 		for (int i = 0; i < arrSplit.length; i++) {
 			System.out.println(arrSplit[i]);
