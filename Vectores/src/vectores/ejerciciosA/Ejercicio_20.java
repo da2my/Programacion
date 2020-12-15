@@ -1,7 +1,5 @@
 package vectores.ejerciciosA;
-
 import java.util.Scanner;
-
 public class Ejercicio_20 {
 
 	public static void main(String[] args) {
@@ -22,7 +20,6 @@ public class Ejercicio_20 {
 			}
 		}
 		System.out.println("Este valor " + existe + " que existe" + "\n" + "y se repetite " + cont + " veces");
-
 //		for (int i : array) {
 //			System.out.println(i);
 //		}
