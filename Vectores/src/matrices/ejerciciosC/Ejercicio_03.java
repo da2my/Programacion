@@ -32,7 +32,6 @@ public class Ejercicio_03 {
 			}
 		}
 
-		double[][] muestraMatriz = new double[n][m];
 		for (int i = 0; i < filas; i++) {// Recorrido de las filas de la matriz
 			System.out.println();
 			for (int j = 0; j < columnas; j++) {// Recorrido de las celdas de una fila
@@ -41,5 +40,6 @@ public class Ejercicio_03 {
 			}
 		}
 		System.out.println("\n"+"Valores menores de 0: " + min + ", Valores mayores a 0: " + max + ", Valores iguales a 0:" + igual);
+	sc.close();
 	}
 }
