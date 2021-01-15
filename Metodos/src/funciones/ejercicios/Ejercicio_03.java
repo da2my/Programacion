@@ -15,6 +15,7 @@ public class Ejercicio_03 {
 		System.out.println("Escribe segundo numero: ");
 		b=sc.nextInt();
 		System.out.println("El minimo es: "+minimo(a, b));
+		sc.close();
 	}
 	
 	static int minimo(int a, int b) {
