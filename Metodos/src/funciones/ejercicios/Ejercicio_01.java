@@ -20,6 +20,7 @@ public class Ejercicio_01 {
 		System.out.println("Escribe segundo numero: ");
 		b=sc.nextDouble();
 		resultado=a*b;
+		sc.close();
 		return resultado;
 	}
 
