@@ -17,6 +17,7 @@ public class Ejercicio_07 {
 		altura=sc.nextDouble();
 		System.out.println("El perimetro es: "+perimetroRectangulo(base, altura));
 		System.out.println("El area es: "+areaRectangulo(base, altura));
+		sc.close();
 	}
 
 	static double perimetroRectangulo(double ancho, double alto) {
