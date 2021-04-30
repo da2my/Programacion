@@ -2,7 +2,6 @@ package ejerciciosB;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -12,12 +11,12 @@ public class EjercicioB5 {
 	public static void main(String[] args) throws Exception {
 		// Creando ruta y directorio
 		File rutaDicc = new File("./Diccionario");
+		File rHaciaDicc = new File("diccionario.txt");
 //		rutaDicc.mkdir();
 		// Creando archivos
-//		crearAlfabeto(rutaDicc);
+		crearAlfabeto(rutaDicc);
 		try {
-//			extraerPalabraTo(rutaDicc);
-			recorreDiccionario();
+			extraerPalabraTo(rHaciaDicc, rutaDicc);//Extraer palabra de un fichero dado
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
@@ -38,58 +37,55 @@ public class EjercicioB5 {
 			}
 		}
 	}
-	
-	public static void recorreDiccionario() {
-		File recAlf = new File("./Diccionario");
-		String recorr[]=recAlf.list();
-		for (int i = 0; i < recorr.length; i++) {
-			System.out.println(recorr[i]);
-		}
-	}
 
-	public static void extraerPalabraTo(File ruta) throws FileNotFoundException {
-		File path = new File(ruta.getPath());
-		String[] listRuta = ruta.list();
+//	public static void recorreDiccionario() {
+//		File recAlf = new File("./Diccionario");
+//		String recorr[] = recAlf.list();
+//		for (int i = 0; i < recorr.length; i++) {
+//			System.out.println(recorr[i]);
+//		}
+//	}
+
+	public static void extraerPalabraTo(File rutaOrigen, File rutaDestino) throws FileNotFoundException {
+		File path = new File(rutaDestino.getPath());
+		String[] listRuta = rutaDestino.list();
 		String letras = "";
-		int i = 0;
 		int j;
 		if (path.exists()) {
-			File rHaciaDicc = new File("diccionario.txt");
-			Scanner lector = new Scanner(rHaciaDicc);
+			Scanner lector = new Scanner(rutaOrigen);
 			while (lector.hasNext()) {
 				String value = lector.nextLine();
 				letras = value;
-				String l = letras.substring(0,1);
-//				i++;//Busqueda binaria o secuencial
-				j=busquedaSecuencial(listRuta, letras.substring(0,1));
-				if (letras.substring(0,1).equalsIgnoreCase(listRuta[j])) {
-					FileWriter leeFichero = null;
+				String x =letras.substring(0, 1);
+				j = busquedaSecuencial(listRuta, x + ".txt");
+				if (letras.substring(0, 1).equalsIgnoreCase(listRuta[j].substring(0, 1))) {
+					File f = new File(rutaDestino, listRuta[j]);
+					FileWriter escribirFichero = null;
 					try {
-						leeFichero = new FileWriter(listRuta[j]);
+						escribirFichero = new FileWriter(f);
 					} catch (IOException e1) {
 						e1.printStackTrace();
 					}
+					
 					try {
-						leeFichero.write(letras);
+						escribirFichero.write(letras);
 					} catch (IOException e) {
 						e.printStackTrace();
+					} finally {
+						try {
+							escribirFichero.close();
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
 					}
 				}
-//				char[] palabra=letras.toCharArray();
-//				for (int i = 0; i < palabra.length; i++) {
-//					char c = palabra[i];
-//					palabra[0];
-//				}
-				System.out.println(l);
 			}
 			lector.close();
-
-//			System.out.println(letras);
 		} else {
 			throw new FileNotFoundException("La ruta no existe!!!");
 		}
 	}
-	
+
 	public static int busquedaSecuencial(String[] v, String elemento) {
 		int j, posicion = -1;
 		for (j = 0; j < v.length && posicion == -1; j++) {

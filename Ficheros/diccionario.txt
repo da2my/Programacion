@@ -1,4 +1,6 @@
+queso
 angel
+mano
 bueno
 cielo
 dedo
@@ -9,12 +11,8 @@ hola
 invierno
 jamas
 kiosco
-leon
-mano
 norma
-oreja
 palo
-queso
 rio
 sol
 tarde
@@ -24,3 +22,5 @@ wyoming
 xilofono
 yendo
 zapato
+leon
+oreja
