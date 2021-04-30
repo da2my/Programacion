@@ -2,7 +2,7 @@ package controller;
 
 import java.util.Scanner;
 
-public class Admin {
+public class Romanos {
 
 	int cont;// contador de cifras
 	int acum;// guardar la suma
@@ -61,7 +61,7 @@ public class Admin {
 
 	public static void arabigoAromano() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Escribe numero Ar√°bigo para convertir a Romano: ");
+		System.out.println("Escribe numero Ar·bigo para convertir a Romano: ");
 		int num;
 		int valor;
 		int resto;
