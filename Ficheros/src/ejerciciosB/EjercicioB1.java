@@ -68,7 +68,7 @@ public class EjercicioB1 {
 	public static String[] obtenerContenArchivo(File archivo) throws IOException {// String[]
 		// se dividen en varias cadenas mediante una expresion regular, que en este caso
 		// es ", "
-		BufferedReader br = null;
+		BufferedReader br=null;
 		FileReader fr = null;
 		String cont = null;
 		try {
@@ -77,7 +77,7 @@ public class EjercicioB1 {
 			cont = br.readLine();// guardo en una variable, su contenido sigue siendo horizontal
 		} catch (Exception e) {
 			e.getStackTrace();
-		} finally {
+		}finally {
 			try {
 				fr.close();
 			} catch (Exception e2) {
@@ -97,7 +97,7 @@ public class EjercicioB1 {
 		return i;
 	}
 
-	public static void leerArchivo(File arch) throws FileNotFoundException {//////////////////////// problema
+	public static void leerArchivo(File arch) throws FileNotFoundException {////////////////////////problema
 //		int[] cont = new int[generaValoresAleatorios().length];
 		if (arch.exists()) {
 			Scanner lector = new Scanner(arch);
