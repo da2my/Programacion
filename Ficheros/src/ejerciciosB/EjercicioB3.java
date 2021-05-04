@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class EjercicioB3 { 
+public class EjercicioB3 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner entrada = new Scanner(System.in);
@@ -16,8 +16,8 @@ public class EjercicioB3 {
 		String ruta1 = entrada.nextLine();
 		System.out.println("Introduce ruta del archivo a escribir: ");
 		String ruta2 = entrada.nextLine();
-		// NOTA MENTAL// Este es con un array////EjercicioB5 se hubiese podido hacer
-		// asi, con un File[]??????
+		// NOTA MENTAL// Este es con un array////EjercicioB5 se hubiese
+		// podido hacer asi, con un File[]??????
 		try {
 			escribeEnRuta(extraeOrdenado(EjercicioB2.abrirArchivo(ruta1)), EjercicioB2.abrirArchivo(ruta2));
 			System.out.println();
@@ -30,7 +30,7 @@ public class EjercicioB3 {
 	public static String[] extraeOrdenado(File arch1) throws FileNotFoundException {
 		String[] listaNombres = null;
 		if (arch1.exists()) {
-			Scanner lector = new Scanner(arch1);//significa que el archivo pasado va a ser escaneado
+			Scanner lector = new Scanner(arch1);// significa que el archivo pasado va a ser escaneado
 			while (lector.hasNext()) {
 				String value = lector.nextLine();
 				listaNombres = value.split(", ");/// no hace falta indexar para meter los valores al array
@@ -45,19 +45,17 @@ public class EjercicioB3 {
 
 	public static void escribeEnRuta(String[] contenido, File ruta) throws IOException {
 		FileWriter rutaEscribir = new FileWriter(ruta);
-		
-			for (int i = 0; i < contenido.length; i++) {
-
-				try {
-					rutaEscribir.write(contenido[i] + "\n");
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
+		for (int i = 0; i < contenido.length; i++) {
 			try {
-				rutaEscribir.close();
+				rutaEscribir.write(contenido[i] + "\n");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+		}
+		try {
+			rutaEscribir.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
