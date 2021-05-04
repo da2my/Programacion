@@ -39,7 +39,7 @@ public class EjercicioB2 {
 		Scanner lector = new Scanner(archivo);
 		while (lector.hasNext()) {
 			String value = lector.nextLine();
-			for (String s : extraerString(value)) {
+			for (String s : extraerString(value)) {///Esto es claveeeeee////
 				System.out.print(s);
 			}
 			calNotaMedia(extraerNumeros(value));
