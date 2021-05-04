@@ -57,7 +57,7 @@ public class EjercicioB5 {
 				String value = lector.nextLine();
 				letras = value;
 				String x =letras.substring(0, 1);
-				j = busquedaSecuencial(listRuta, x + ".txt");
+				j = busquedaSecuencial(listRuta, x + ".txt");//para que de igual el orden
 				if (letras.substring(0, 1).equalsIgnoreCase(listRuta[j].substring(0, 1))) {
 					File f = new File(rutaDestino, listRuta[j]);
 					FileWriter escribirFichero = null;
